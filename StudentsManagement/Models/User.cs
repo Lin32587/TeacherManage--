@@ -16,16 +16,20 @@ namespace StudentsManagement.Models
             Score = new HashSet<Score>();
         }
 
-        [StringLength(12)]
+        [DisplayName("学号")]
+        [Required(ErrorMessage ="学号不能为空")]
+        [StringLength(12,MinimumLength=10,
+            ErrorMessage ="学号必须十位字符")]
         public string UserID { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="姓名不能为空")]
         [DisplayName("姓名")]
         public string UserName { get; set; }
 
+        [DisplayName("班级")]
         public string SClass { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="密码不能为空")]
         public string Pwd { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

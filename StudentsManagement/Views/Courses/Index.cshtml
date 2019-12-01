@@ -6,10 +6,8 @@
 
 <h2>课程</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+
+<table class="table" style="margin-top:80px">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.CName)
@@ -17,19 +15,24 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.CName)
-        </td>
-        <td>
-            <div class="btn-group">
-                <a class="btn btn-dark btn-sm" href="@Url.Action("Edit", new { id = item.CID })" role="button">Edit</a>
-                <a class="btn btn-dark btn-sm" href="@Url.Action("Details", new { id = item.CID })" role="button">Details</a>
-                <a class="btn btn-dark btn-sm" href="@Url.Action("Delete", new { id = item.CID })" role="button">Delete</a>
-            </div>
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CName)
+            </td>
+            <td>
+                <div class="btn-group">
+                    <a class="btn btn-dark btn-sm" href="@Url.Action("Edit", new { id = item.CID })" role="button">Edit</a>
+                    <a class="btn btn-dark btn-sm" href="@Url.Action("Details", new { id = item.CID })" role="button">Details</a>
+                    <a class="btn btn-dark btn-sm" href="@Url.Action("Delete", new { id = item.CID })" role="button">Delete</a>
+                </div>
+            </td>
+        </tr>
+    }
 
 </table>
+
+<p>
+    <a class="btn btn-dark btn-sm" href="@Url.Action("Create")" role="button">新建</a>
+</p>

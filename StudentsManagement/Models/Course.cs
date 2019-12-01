@@ -2,6 +2,7 @@ namespace StudentsManagement.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
@@ -17,9 +18,11 @@ namespace StudentsManagement.Models
 
         [Key]
         [StringLength(3)]
+        [DisplayName("¿Î³Ì±àºÅ")]
         public string CID { get; set; }
 
         [Required]
+        [DisplayName("¿Î³ÌÃû³Æ")]
         public string CName { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

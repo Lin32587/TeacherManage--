@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "学生成绩";
+    Layout = "~/Views/Shared/_LayoutForStu.cshtml";
 }
 
 <h3>学生成绩</h3>
@@ -41,3 +42,5 @@
     }
 
 </table>
+
+<a class="btn btn-dark" href="@Url.Action("ForStu","Lin")">Back</a>

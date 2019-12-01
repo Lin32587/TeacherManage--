@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using System.Data.Entity;
 using StudentsManagement.cs;
 using StudentsManagement.Models;
+using System.Web.Services.Description;
 
 namespace StudentsManagement.Controllers
 {
@@ -25,6 +26,11 @@ namespace StudentsManagement.Controllers
             ViewBag.count1 = db.User.Count();
             ViewBag.count2 = db.Score.Count();
             ViewBag.count3 = db.Course.Count();
+            return View();
+        }
+
+        public ActionResult ForStu()
+        {
             return View();
         }
     }

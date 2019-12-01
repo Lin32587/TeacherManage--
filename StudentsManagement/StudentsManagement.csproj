@@ -165,6 +165,13 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="cs\alexander-tsang-1664957-unsplash.jpg" />
+    <Content Include="cs\Frozen City.mp4" />
+    <Content Include="cs\karl-jk-hedin-482509-unsplash.jpg" />
+    <Content Include="cs\mnml.jpg" />
+    <Content Include="cs\osman-rana-293978-unsplash.jpg" />
+    <Content Include="cs\Sloping Street.mp4" />
+    <Content Include="cs\summer.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -235,11 +242,6 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Lin\Index.cshtml" />
-    <Content Include="Views\Users\Create.cshtml" />
-    <Content Include="Views\Users\Delete.cshtml" />
-    <Content Include="Views\Users\Details.cshtml" />
-    <Content Include="Views\Users\Edit.cshtml" />
-    <Content Include="Views\Users\Index.cshtml" />
     <Content Include="Views\Courses\Create.cshtml" />
     <Content Include="Views\Courses\Delete.cshtml" />
     <Content Include="Views\Courses\Details.cshtml" />
@@ -253,6 +255,15 @@
     <Content Include="Views\Lin\InitStu.cshtml" />
     <Content Include="Views\Sign\Index.cshtml" />
     <Content Include="Views\Scores\ForStu.cshtml" />
+    <Content Include="Views\Users\Create.cshtml" />
+    <Content Include="Views\Users\Delete.cshtml" />
+    <Content Include="Views\Users\Details.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Sign\Signin.cshtml" />
+    <Content Include="Views\Sign\Signup.cshtml" />
+    <Content Include="Views\Shared\_LayoutForStu.cshtml" />
+    <Content Include="Views\Lin\ForStu.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

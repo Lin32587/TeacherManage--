@@ -1,0 +1,166 @@
+﻿@{
+    Layout = null;
+}
+@model StudentsManagement.Models.User
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box
+        }
+
+        body {
+        }
+
+        .header-google .logo-google {
+            width: 112px;
+            margin: 30px auto;
+        }
+
+        .main-form {
+            text-align: center;
+            overflow: hidden
+        }
+
+        .banner {
+            margin-top: -12px
+        }
+
+            .banner h2 {
+                font-size: 18px;
+                font-weight: 400;
+                color: #555;
+                margin-top: 12px
+            }
+
+        .form-container {
+            background-color: #f7f7f7;
+            width: 350px;
+            height: 380px;
+            margin: 20px auto;
+            padding: 40px 36px;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+        }
+
+
+            .form-container .form .avatar-form > img {
+                width: 92px;
+                border-radius: 50%
+            }
+
+        .input-form {
+            margin-top: 20px
+        }
+
+            .input-form input {
+                display: block;
+                float: left;
+                width: 100%;
+                padding: 6px 10px;
+                height: 44px;
+                font-size: 16px;
+                margin: 6px auto;
+                border: 1px solid #d9d9d9;
+                border-radius: 1px;
+                color: #404040;
+            }
+
+            .input-form button {
+                background-color: #4d90fe;
+                border: 1px solid #3079ed;
+                float: left;
+                width: 100%;
+                height: 36px;
+                padding: 10px;
+                border-radius: 3px;
+                color: #FFF;
+                font-weight: 700;
+                margin-top: 2px;
+                cursor: pointer
+            }
+
+
+
+        .forget-password {
+            float: right;
+            margin-top: 6px
+        }
+
+
+
+        a, footer {
+            text-decoration: none;
+            color: #427fed;
+            font-size: 14px
+        }
+
+        .apps-google {
+            margin-top: 8px;
+            text-align: center
+        }
+
+            .apps-google .creat-acc a {
+                display: block;
+            }
+
+            .apps-google .creat-acc p {
+                font-size: 14px;
+                margin: 30px 0 8px;
+                color: #555
+            }
+
+        footer {
+            font-size: 10px;
+            text-align: center;
+            color: #000;
+            margin-top: 20px;
+            margin-bottom: 40px
+        }
+    </style>
+</head>
+<body style="background-image:url(../../cs/osman-rana-293978-unsplash.jpg);background-size:inherit">
+    <div class="d-flex justify-content-center">
+        <h1 style="font-family:'LEIXO DEMO';font-weight:bold">StudentsManagement</h1>
+    </div>
+        <div class="main-form mt-5">
+            <div class="form-container">
+                <div class="form">
+                    <div class="avatar-form">
+                        <img src="https://i1.imgpile.com/i/6QSdg.png" alt="Avatar" />
+                    </div>
+                </div>
+                @using (Html.BeginForm("Signin", "Sign", FormMethod.Post))
+                {
+                <div class="col-md-12" style="margin-top:30px">
+                    @Html.TextBox("UserID", null, new { id = "UserID", placeholder = "  Your ID",type="text",style="width:250px;height:40px",@class= "border border-gray rounded" })
+                    @Html.ValidationMessage("UserID")<br />
+                </div>
+                <div class="col-md-12" style="margin-top:20px">
+                    @Html.TextBox("Pwd", null, new { id = "Pwd", placeholder = "  Your Password",type="password",style = "width:250px;height:40px", @class = "border border-gray rounded" })
+                    @Html.ValidationMessage("Pwd")<br />
+                </div>
+                        <input class="btn btn-info" style="margin-top:35px;width:200px" type="submit" value="Sign in" />
+                        @Html.ValidationSummary(true)
+                 }
+                </div>
+        <div class="apps-google">
+            <div class="creat-acc">
+                <a href="@Url.Action("Signup")">Create a new account！</a>
+            </div>
+        </div>
+        <footer>
+            Lin's System &copy; 2019.
+        </footer>
+</body>
+</html>

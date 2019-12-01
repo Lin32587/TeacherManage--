@@ -6,11 +6,12 @@
 
 <h2>用户</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+
+<table class="table" style="margin-top:80px">
     <tr>
+        <th>
+            @Html.DisplayNameFor(Model => Model.UserID)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.UserName)
         </th>
@@ -20,28 +21,38 @@
         <th>
             @Html.DisplayNameFor(model => model.Pwd)
         </th>
+        
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.UserName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SClass)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Pwd)
-        </td>
-        <td>
-            <div class="btn-group">
-                <a class="btn btn-dark btn-sm" href="@Url.Action("Edit", new { id = item.UserID })" role="button">Edit</a>
-                <a class="btn btn-dark btn-sm" href="@Url.Action("Details", new { id = item.UserID })" role="button">Details</a>
-                <a class="btn btn-dark btn-sm" href="@Url.Action("Delete", new { id = item.UserID })" role="button">Delete</a>
-            </div>
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SClass)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pwd)
+            </td> 
+            <td>
+                <div class="btn-group">
+                    <a class="btn btn-dark btn-sm" href="@Url.Action("Edit", new { id = item.UserID })" role="button">Edit</a>
+                    <a class="btn btn-dark btn-sm" href="@Url.Action("Details", new { id = item.UserID })" role="button">Details</a>
+                    <a class="btn btn-dark btn-sm" href="@Url.Action("Delete", new { id = item.UserID })" role="button">Delete</a>
+                </div>
+            </td>
+        </tr>
+    }
 
 </table>
+
+<p>
+    <a class="btn btn-dark btn-sm" href="@Url.Action("Create")" role="button">新建</a>
+</p>
+

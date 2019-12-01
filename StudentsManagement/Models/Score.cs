@@ -21,8 +21,11 @@ namespace StudentsManagement.Models
 
         [Required]
         [StringLength(3)]
+        [DisplayName("课程编号")]
         public string CID { get; set; }
 
+        [DisplayName("成绩")]
+        [Range(0,100,ErrorMessage ="成绩必须是0-100之间的整数！")]
         public int Grade { get; set; }
 
         [Column(TypeName = "date")]

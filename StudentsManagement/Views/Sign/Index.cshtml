@@ -4,13 +4,29 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentsManagement</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js">
+
+    </script>
 </head>
-<body>
-    <div> 
+<body style="background-image:url(../../cs/alexander-tsang-1664957-unsplash.jpg);background-attachment:scroll;background-size:cover">
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm fixed-top">
+        <h5 class="my-0 mr-md-auto font-weight-normal" style=" font-family:Cambria;font-weight:bold">StudentsManagementSystem</h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+            <a class="btn btn-outline-info" href="@Url.Action("Signin")" style="font-family:Cambria">Sign in</a>
+            <a class="btn btn-outline-secondary" href="@Url.Action("Signup")" style="font-family:Cambria">Sign up</a>
+        </nav>
+    </div>
+    <div class="d-flex justify-content-center" style="margin-top:300px">
+        <h1 style="color:#ffffff;font-family:'LEIXO DEMO';font-weight:bold;font-size:50px">
+            Welcome!<br>
+        </h1>
     </div>
 </body>
 </html>
