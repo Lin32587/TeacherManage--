@@ -1,0 +1,55 @@
+﻿@model IEnumerable<StudentsManagement.Models.Score>
+
+@{
+    ViewBag.Title = "成绩";
+}
+
+<h2>成绩</h2>
+
+
+<table class="table" style="margin-top:80px">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Course.CName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Grade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TestTime)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Course.CName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Grade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TestTime)
+        </td>
+        <td>
+            <div class="btn-group">
+                <a class="btn btn-dark btn-sm" href="@Url.Action("Edit", new { id = item.SID })" role="button">Edit</a>
+                <a class="btn btn-dark btn-sm" href="@Url.Action("Details", new { id = item.SID })" role="button">Details</a>
+                <a class="btn btn-dark btn-sm" href="@Url.Action("Delete", new { id = item.SID })" role="button">Delete</a>
+            </div>
+        </td>
+    </tr>
+}
+
+</table>
+
+<p>
+    <a class="btn btn-dark btn-sm" href="@Url.Action("Create")" role="button">新建</a>
+</p>

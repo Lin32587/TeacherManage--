@@ -1,0 +1,43 @@
+﻿@model IEnumerable<StudentsManagement.Models.Score>
+
+@{
+    ViewBag.Title = "学生成绩";
+}
+
+<h3>学生成绩</h3>
+<table class="table" style="margin-top:80px">
+    <tr class="justify-content-lg-center">
+        <th>
+            @Html.DisplayNameFor(model => model.Course.CName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Grade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TestTime)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Course.CName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Grade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TestTime)
+            </td>
+        </tr>
+    }
+
+</table>

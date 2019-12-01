@@ -1,0 +1,47 @@
+﻿@model IEnumerable<StudentsManagement.Models.User>
+
+@{
+    ViewBag.Title = "用户";
+}
+
+<h2>用户</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SClass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pwd)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SClass)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pwd)
+        </td>
+        <td>
+            <div class="btn-group">
+                <a class="btn btn-dark btn-sm" href="@Url.Action("Edit", new { id = item.UserID })" role="button">Edit</a>
+                <a class="btn btn-dark btn-sm" href="@Url.Action("Details", new { id = item.UserID })" role="button">Details</a>
+                <a class="btn btn-dark btn-sm" href="@Url.Action("Delete", new { id = item.UserID })" role="button">Delete</a>
+            </div>
+        </td>
+    </tr>
+}
+
+</table>
