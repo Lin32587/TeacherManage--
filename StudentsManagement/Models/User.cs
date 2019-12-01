@@ -16,17 +16,17 @@ namespace StudentsManagement.Models
             Score = new HashSet<Score>();
         }
 
-        [DisplayName("学号")]
-        [Required(ErrorMessage ="学号不能为空")]
+        [DisplayName("编号")]
+        [Required(ErrorMessage ="编号不能为空")]
         [StringLength(12,MinimumLength=10,
-            ErrorMessage ="学号必须十位字符")]
+            ErrorMessage ="编号必须十位字符")]
         public string UserID { get; set; }
 
         [Required(ErrorMessage ="姓名不能为空")]
-        [DisplayName("姓名")]
+        [DisplayName("教师姓名")]
         public string UserName { get; set; }
 
-        [DisplayName("班级")]
+        [DisplayName("上课地点")]
         public string SClass { get; set; }
 
         [Required(ErrorMessage ="密码不能为空")]

@@ -1,11 +1,11 @@
 ﻿@model IEnumerable<StudentsManagement.Models.Score>
 
 @{
-    ViewBag.Title = "学生成绩";
+    ViewBag.Title = "教师上课信息";
     Layout = "~/Views/Shared/_LayoutForStu.cshtml";
 }
 
-<h3>学生成绩</h3>
+<h3>课程信息</h3>
 <table class="table" style="margin-top:80px">
     <tr class="justify-content-lg-center">
         <th>
@@ -16,6 +16,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Grade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Place)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.TestTime)
@@ -34,6 +37,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Grade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Place)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.TestTime)

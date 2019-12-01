@@ -29,10 +29,10 @@ namespace StudentsManagement.cs
             context.SaveChanges();
             var t3 = new List<Score>
             {
-                new Score{SID="2019061001",UserID="201613160200",CID="001",Grade=90,TestTime=DateTime.Parse("2019-06-10")},
-                new Score{SID="2018070101",UserID="201613160200",CID="001",Grade=82,TestTime=DateTime.Parse("2018-07-01")},
-                new Score{SID="2019061002",UserID="201613160300",CID="001",Grade=70,TestTime=DateTime.Parse("2019-06-10")},
-                new Score{SID="2019061202",UserID="201613160200",CID="002",Grade=98,TestTime=DateTime.Parse("2019-06-12")},
+                new Score{SID="2019061001",UserID="201613160200",CID="001",Grade=90,Place="9-403",TestTime=DateTime.Parse("2019-06-10")},
+                new Score{SID="2018070101",UserID="201613160200",CID="001",Grade=82,Place="9-506",TestTime=DateTime.Parse("2018-07-01")},
+                new Score{SID="2019061002",UserID="201613160300",CID="001",Grade=70,Place="8-601",TestTime=DateTime.Parse("2019-06-10")},
+                new Score{SID="2019061202",UserID="201613160200",CID="002",Grade=98,Place="工1-302",TestTime=DateTime.Parse("2019-06-12")},
             };
             t3.ForEach(v => context.Score.Add(v));
             context.SaveChanges();

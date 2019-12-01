@@ -36,17 +36,17 @@ namespace StudentsManagement.Controllers
             //    context.Database.Initialize(true);
             //    var a = context.User
             //        .Where(b => b.UserID == userId).FirstOrDefault();
-                
+
             //}
 
             if (user.UserID.Trim().Equals("2016131602AD") && user.Pwd.Trim().Equals("123456"))
-                {
-                    return RedirectToAction("Index", "Lin");
-                }
-                else if (user.UserID.Trim().Equals(userId) || user.Pwd.Trim().Equals(pwd))
-                {
-                    return RedirectToAction("ForStu", "Lin");
-                }
+            {
+                return RedirectToAction("Index", "Lin");
+            }
+            else if (user.UserID.Trim().Equals(userId) && user.Pwd.Trim().Equals(pwd))
+            {
+                return RedirectToAction("ForStu", "Lin");
+            }
             ModelState.AddModelError("", "用户名或密码错误");
             return View("Signin", user);
         }

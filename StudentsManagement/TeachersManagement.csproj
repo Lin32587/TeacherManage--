@@ -148,6 +148,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912010754086_InitialCreate.cs" />
+    <Compile Include="Migrations\201912010754086_InitialCreate.Designer.cs">
+      <DependentUpon>201912010754086_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Score.cs" />
     <Compile Include="Models\StuDb.cs" />
@@ -265,7 +270,11 @@
     <Content Include="Views\Shared\_LayoutForStu.cshtml" />
     <Content Include="Views\Lin\ForStu.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201912010754086_InitialCreate.resx">
+      <DependentUpon>201912010754086_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

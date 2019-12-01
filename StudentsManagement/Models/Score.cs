@@ -24,12 +24,15 @@ namespace StudentsManagement.Models
         [DisplayName("课程编号")]
         public string CID { get; set; }
 
-        [DisplayName("成绩")]
-        [Range(0,100,ErrorMessage ="成绩必须是0-100之间的整数！")]
+        [DisplayName("学生人数")]
+        [Range(0,200,ErrorMessage ="人数必须是0-200之间的整数！")]
         public int Grade { get; set; }
 
+        [DisplayName("上课地点")]
+        public string Place { get; set; }
+
         [Column(TypeName = "date")]
-        [DisplayName("考试时间"),
+        [DisplayName("上课时间"),
             DisplayFormat(DataFormatString ="{0:yyyy-MM-dd}")]
         public DateTime? TestTime { get; set; }
 
